@@ -6,6 +6,7 @@ from users.schema import UserType
 from links.models import Link, Vote
 from graphql import GraphQLError
 
+from django.db.models import Q
 
 
 class LinkType(DjangoObjectType):
@@ -18,10 +19,28 @@ class VoteType(DjangoObjectType):
 
 
 class Query(graphene.ObjectType):
-    links = graphene.List(LinkType)
+    links = graphene.List(
+        LinkType,
+        search=graphene.String(),
+        first=graphene.Int(),
+        skip=graphene.Int(),
+    )
     votes = graphene.List(VoteType)
 
-    def resolve_links(self, info, **kwargs):
+    def resolve_links(self, info, search = None, first = None, skip = None, **kwargs): ##by default search is none, if arg not provided
+        qs = Link.objects.all()
+
+        if search:                                          ##if not none
+            filter = ( Q(url__icontains = search) | Q(description__icontains = search) )
+            qs = qs.filter(filter)
+
+            if skip:                ## skips first n items
+                qs = qs[skip:]
+            if first:               ## shows first n items
+                qs = qs[:first]
+
+            return qs
+
         return Link.objects.all()
 
     def resolve_votes(self, info, **kwargs):
