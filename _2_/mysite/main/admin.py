@@ -14,6 +14,10 @@ class TutorialAdmin(admin.ModelAdmin):
         models.TextField: {
             'widget':TinyMCE()
         }
+        # ,models.CharField: {
+        #     'widget':TinyMCE()
+        # }
+
     }
 
 admin.site.register(Tutorial, TutorialAdmin)
