@@ -23,5 +23,14 @@
 3. how to include a html block in another... like import in python, at the top do {%extends "file path"%}
 4. changed css by [ downloading scss source -> editing scss -> converting to css ->copying to "mysite/main/static/main/css" ->linking it in header.css  ]
 
+### video 6 : 
+1. making register.html page
+2. {% csrf_token %} : cross site request forgery token -> security reasons-- so that noone tricks users to get info(for every form do it)
+3. just build the form in django and catch it as a variable : {{form}}
+4. add register in views, create the form variable in the function itself and return, also add in urls
+5. add submit button 
+6. {{form}} has attributes EG : as_table, as_p, etc ->its for styling so F 
+7. In register function in views add the actual user creation code->adding to admin database.
+
 ### Random notes : 
 1. to comment multiple lines in python press (CTRL + '/') 
