@@ -10,5 +10,12 @@
 1. now we have the TextField, but we need editing tools, so added a preexisting app TinyMCE in mysite/settings, also added its settings (copy pasted) 
 2. then in  main.admin.py added the widget TinyMCE by importing and overriding the form field->textfield and set widget->TinyMCE; and viola we now have a fully functional text editor to wite paragraphs!!!
 
+### video 4 :
+1. in view this is how you link a html page :
+    return render(request=request, template_name="main/home.html", context = {"tutorials": Tutorial.objects.all})
+2. {{ variable }} & {% logic %}
+3. putting "|safe" to render the variable into code. EG:{{variable|safe}}
+4. javascript is put where needed, CSS is always put at the beginning.
+
 ### Random notes : 
 1. to comment multiple lines in python press (CTRL + '/') 
