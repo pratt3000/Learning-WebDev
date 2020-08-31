@@ -32,5 +32,9 @@
 6. {{form}} has attributes EG : as_table, as_p, etc ->its for styling so F 
 7. In register function in views add the actual user creation code->adding to admin database.
 
+### video 7 : 
+1. added pop up messages while registering warning, success, info, etc
+2. simplified the html code by making includes folder 
+
 ### Random notes : 
 1. to comment multiple lines in python press (CTRL + '/') 
