@@ -17,5 +17,11 @@
 3. putting "|safe" to render the variable into code. EG:{{variable|safe}}
 4. javascript is put where needed, CSS is always put at the beginning.
 
+### video 5 : 
+1. added CSS "MaterialisticCSS" & navbar [copy-pasted HTML lol]
+2. learnt how to use blocks {%block content%} {%endblock%}
+3. how to include a html block in another... like import in python, at the top do {%extends "file path"%}
+4. changed css by [ downloading scss source -> editing scss -> converting to css ->copying to "mysite/main/static/main/css" ->linking it in header.css  ]
+
 ### Random notes : 
 1. to comment multiple lines in python press (CTRL + '/') 

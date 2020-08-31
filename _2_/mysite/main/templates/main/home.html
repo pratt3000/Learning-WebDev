@@ -1,15 +1,21 @@
-<head>
-    {% load static %}
-    <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
-</head>
+{% extends "main/header.html" %}
 
-<body>
-    {% for tut in tutorials %}
-        <p>{{tut.tutorial_title}}</p>
-        <p>{{tut.tutorial_content|safe}}</p>
-        <p>{{tut.tutorial_published}}</p>
-        <br><br>
-    {% endfor %}
-</body>
-
-<script src="{% static 'tinymce/js/prism.js' %}"></script>
+{% block content %}
+    <div class="row">
+        {% for tut in tutorials %}
+            <div class="col s12 m6 l4">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{tut.tutorial_title}}</span>
+                        <p style = "font-size :70%">{{tut.tutorial_published}}</p>
+                        <p>{{tut.tutorial_content|safe}}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Visit</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+                
