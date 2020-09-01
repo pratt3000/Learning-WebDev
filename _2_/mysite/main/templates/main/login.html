@@ -3,12 +3,13 @@
 {% block content %}
     <form method="POST">
         {% csrf_token%} 
-        {{form.as_table}}
+        {{form.as_p}}
+
         <button type="submit" class="btn" style="background-color:cornflowerblue; color:beige">
             Submit
         </button>
     </form>
 
-    Already have an account? <a href="/login"><strong>login</strong></a>
+    Don't have an account?<a href="/register"><strong>Register</strong></a>
 {% endblock %}
                 

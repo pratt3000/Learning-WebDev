@@ -36,5 +36,10 @@
 1. added pop up messages while registering warning, success, info, etc
 2. simplified the html code by making includes folder 
 
+### video 8 : 
+1. added logout,login functionality in views.py
+2. made login.html
+3. customised the default registertin for to accept emails too by making forms.py
+
 ### Random notes : 
 1. to comment multiple lines in python press (CTRL + '/') 
