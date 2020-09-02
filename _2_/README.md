@@ -49,6 +49,11 @@
 ### video 10 : 
 1. used the foreign keys to fetch urls and display them using category.html.... major changes in views.py, added a single slug function to return the required url!
 
+### video 11:
+1. .get->gets one object
+2. .filter->gets list of objects
+3. 
+
 ### Random notes : 
 1. to comment multiple lines in python press (CTRL + '/') 
 2.  1. UNDO local file changes and KEEP your last commit
