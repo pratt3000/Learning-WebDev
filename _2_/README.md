@@ -41,5 +41,19 @@
 2. made login.html
 3. customised the default registertin for to accept emails too by making forms.py
 
+### video 9 : 
+1. created models for series and category in models.py
+2. registered them in amin.py
+3. viola!
+
 ### Random notes : 
 1. to comment multiple lines in python press (CTRL + '/') 
+2.  1. UNDO local file changes and KEEP your last commit
+    git reset --hard
+
+    2. UNDO local file changes and REMOVE your last commit
+    git reset --hard HEAD^
+    
+    3. KEEP local file changes and REMOVE your last commit
+    git reset --soft HEAD^
+
